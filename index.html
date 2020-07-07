@@ -7,18 +7,30 @@
     </head>
     <body>
         <header>The Tower of Hanoi</header>
+            <!-- Maybe rules= ul for bullet points -->
+            <div class="rules">Rules:
+                All Discs must be moved from the left-most pole to the right-most pole. A larger block can never be on a smaller block.
+                Only one block can be moved at a time.
+                Each turn, a block must be moved to another (you can't put one back down). You can put blocks on any of the three poles.</div>
         <main>
             <div class="allPoles">
-                <div class="poleA">A</div>
-                <div class="poleB">B</div>
-                <div class="polec">C</div>
+                <div class="poleA" id="a">A
+                    <hr class="rightPole">
+                </div>
+                <div class="poleB" id="b">B
+                    <hr class="middlePole">
+                </div>
+                <div class="poleC" id="c">C
+                <hr class="leftPole"></div>
             </div>
-            <div class="floor"></div>
+            <div class="floor">
+                <hr class="base">
+            </div>
             <div class="allBlocks">
-                <div class="block1">1</div>
-                <div class="block2">2</div>
-                <div class="block3">3</div>
-                <div class="block4">4</div> 
+                <div class="block1 solidBlock" >1</div>
+                <div class="block2 solidBlock">2</div>
+                <div class="block3 solidBlock">3</div>
+                <div class="block4 solidBlock">4</div> 
             </div>
 
         </main>
