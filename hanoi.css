@@ -35,8 +35,9 @@
   }
 .poleB {
   grid-column: 4;
-  grid-row: 1/ 6;
+  grid-row: 1;
   background-color: red;
+    /* position: absolute; */
   /* display: inline-block; */
 }
 #c {
@@ -61,9 +62,11 @@
   grid-row: 5;
   grid-column: 2;
   height: 70px;
-  width: 100%;
+  width: 110%;
   background-color: navy;
   z-index: 1;
+  justify-self: center;
+  align-self: center;
   /* display: flexbox; */
 }
 .block2 {

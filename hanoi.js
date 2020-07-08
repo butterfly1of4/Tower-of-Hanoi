@@ -52,6 +52,36 @@ let clickB2 = block2click.addEventListener("click", function(e){
 let clickB3 = block3click.addEventListener("click", move)
 function move(e){
     e.preventDefault()
-    poleB.append(block3click)
+    block3click.classList.add("poleB")
+    
+    poleB.prepend(block3click)
     console.log(arrayA, arrayB)
 }
+function removeFromA(block){
+    arrayA.splice(arrayA.length, 1)
+}
+
+
+
+function addToB(block) {
+    if (arrayB.length == 0) {              
+         arrayB.append(block[x])
+  } if (arrayB.length >= 1 && block[x] < block[y]){
+        arrayB.splice(1,1)
+  }
+
+function removeFromB(block){
+    arrayB.splice(arrayB.length, 1)
+}
+
+function removeFromC(block){
+    arrayC.splice(arrayC.length, 1)
+}
+
+
+// function addToB(block){
+//       else if (arrayB.length == 1 && block[x] <block[y]){
+//             arrayB.splice(1,1,block[x])
+//         }  else if (arrayB.length == 2 && block[x] < block[y]) {
+//             arrayB.splice(2,1,block[x])}
+        
