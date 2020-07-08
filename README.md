@@ -1,3 +1,24 @@
+    Move allowed: if (x < y) {
+        true 
+    }   else {
+        false
+    }
+
+    for moving blocks: add/remove classes to print blocks in correct spaces on poles
+
+    function for comparing value of 2 poles
+
+    event listeners 
+
+
+
+
+
+
+
+
+
+
 # Tower-of-Hanoi
 To Load: 
     github.com/butterlfy1of4/Tower-of-Hanoi
@@ -62,5 +83,7 @@ GAME LOGIC-RULES: block1 < block2 < block3 < block4
         -if block x.value > block y.value - yes pole
         -if length of pole = 4- no pole
 
+
+
 WINNING:    
-    if 4 blocks are on pole b end game
+    if 4 blocks are on pole c end game
