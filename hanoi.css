@@ -2,7 +2,11 @@
   box-sizing: border-box;
   max-height: 100vh;
 }
-
+/* .testclass {
+    grid-row: 5;
+    grid-column: 4;
+    background-color: yellow;
+} */
 .box {
   display: grid;
   grid-template-columns: 20% 1fr 7% 1fr 7% 1fr 20%;
@@ -10,18 +14,37 @@
   height: 50vh;
   margin-top: 30%;
 }
+#a {
+    grid-column: 2;
+    grid-row: 1 / 6;
+    background-color: cornflowerblue;
+    /* display: inline-block; */
+  }
 .poleA {
   grid-column: 2;
   grid-row: 1 / 6;
   background-color: cornflowerblue;
   /* display: inline-block; */
 }
+
+#b {
+    grid-column: 4;
+    grid-row: 1/ 6;
+    background-color: red;
+    /* display: inline-block; */
+  }
 .poleB {
   grid-column: 4;
   grid-row: 1/ 6;
   background-color: red;
   /* display: inline-block; */
 }
+#c {
+    grid-column: 6;
+    grid-row: 1 / 6;
+    background-color: lightgreen;
+    /* display: inline-block; */
+  }
 .poleC {
   grid-column: 6;
   grid-row: 1 / 6;
@@ -38,10 +61,10 @@
   grid-row: 5;
   grid-column: 2;
   height: 70px;
-  width: 135px;
+  width: 100%;
   background-color: navy;
   z-index: 1;
-  display: flexbox;
+  /* display: flexbox; */
 }
 .block2 {
     grid-row: 4;
