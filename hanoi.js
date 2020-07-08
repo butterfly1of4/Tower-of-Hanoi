@@ -45,17 +45,13 @@ let poleCclick = poleC.addEventListener("click", function (e){
 })
 
 //BLOCK ONCLICK
-let clickB1 = block1click.addEventListener("click", function(e){
-    // e.preventDefault()
-    
-    block1click.classList.remove("block1")
-    block1click.classList.add("testclass")
-    console.log("you clickedbutton 1")
-})
+let clickB1 = block1click.addEventListener("click", function(e){console.log(arrayA[0])})
 let clickB2 = block2click.addEventListener("click", function(e){
     console.log(arrayA[1])
 })
-let clickB3 = block3click.addEventListener("click", function(e){
-    console.log(arrayA[2])
-})
-
+let clickB3 = block3click.addEventListener("click", move)
+function move(e){
+    e.preventDefault()
+    poleB.append(block3click)
+    console.log(arrayA, arrayB)
+}
