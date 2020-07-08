@@ -14,44 +14,34 @@
   height: 50vh;
   margin-top: 30%;
 }
-#a {
-    grid-column: 2;
-    grid-row: 1 / 6;
-    background-color: cornflowerblue;
-    /* display: inline-block; */
-  }
+
 .poleA {
   grid-column: 2;
   grid-row: 1 / 6;
   background-color: cornflowerblue;
-  /* display: inline-block; */
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-start;
 }
 
-#b {
-    grid-column: 4;
-    grid-row: 1/ 6;
-    background-color: red;
-    /* display: inline-block; */
-  }
 .poleB {
   grid-column: 4;
-  grid-row: 1;
+  grid-row: 1 / 6;
   background-color: red;
-    /* position: absolute; */
-  /* display: inline-block; */
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-start;
 }
-#c {
-    grid-column: 6;
-    grid-row: 1 / 6;
-    background-color: lightgreen;
-    /* display: inline-block; */
-  }
+
 .poleC {
   grid-column: 6;
   grid-row: 1 / 6;
   background-color: lightgreen;
-  /* display: inline-block; */
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-start;
 }
+
 .floor {
   grid-column: 1 / 8;
   grid-row: 6;
@@ -70,41 +60,33 @@
   /* display: flexbox; */
 }
 .block2 {
-    grid-row: 4;
-    grid-column: 2;
-    height: 70px;
-    width: 100px;
-    background-color: navy;
-    z-index: 1;
-    justify-self: center;
-    align-self: center;
-    display: flexbox;
+  grid-row: 4;
+  grid-column: 2;
+  height: 70px;
+  width: 100px;
+  background-color: navy;
+  z-index: 1;
+  justify-self: center;
+  align-self: center;
+  display: flexbox;
 }
-.block3{
-    grid-row: 3;
-    grid-column: 2;
-    height: 70px;
-    width: 65px;
-    background-color: navy;
-    z-index: 1;
-    align-self: center;
-    justify-self: center;
-    display: flexbox;
+.block3 {
+  grid-row: 3;
+  grid-column: 2;
+  height: 70px;
+  width: 65px;
+  background-color: navy;
+  z-index: 1;
+  align-self: center;
+  justify-self: center;
+  display: flexbox;
 }
 
 .solidBlock {
-    justify-items: center;
+  justify-items: center;
 }
 
 .testblock {
-    grid-row: 1;
-    grid-column: 2;
-}
-
-
-/*
-.block4{
-    height: 70px;
-    width: 40px;
-    background-color: navy;
+  grid-row: 1;
+  grid-column: 2;
 }
