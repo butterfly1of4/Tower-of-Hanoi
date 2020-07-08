@@ -40,7 +40,8 @@
   height: 70px;
   width: 135px;
   background-color: navy;
-  z-index: 2;
+  z-index: 1;
+  display: flexbox;
 }
 .block2 {
     grid-row: 4;
@@ -48,9 +49,10 @@
     height: 70px;
     width: 100px;
     background-color: navy;
-    z-index: 2;
+    z-index: 1;
     justify-self: center;
     align-self: center;
+    display: flexbox;
 }
 .block3{
     grid-row: 3;
@@ -58,9 +60,10 @@
     height: 70px;
     width: 65px;
     background-color: navy;
-    z-index: 2;
+    z-index: 1;
     align-self: center;
     justify-self: center;
+    display: flexbox;
 }
 
 .solidBlock {
