@@ -9,7 +9,7 @@
     function for comparing value of 2 poles
 
     event listeners 
-
+    maybe use borders on l/r of blocks instead of a grid 
 
 
 
