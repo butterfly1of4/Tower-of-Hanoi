@@ -1,12 +1,47 @@
 console.log("hanoi");
+
+
 //BLOCK VALUES
 const blocks = {
     block1: 1,
     block2: 2,
     block3: 3
 }
+//POLE SELECTORS
+let poleA = document.querySelector(".poleA");
+let poleB = document.querySelector(".poleB");
+let poleC = document.querySelector(".poleC");
 
+let allpoleA = {
+    pole: poleA,
+    column: 2,
+    rows: [5,4,3]
+}
 
+let allpoleB = {
+    pole: poleB,
+    column: 4,
+    rows: [5,4,3]
+}
+let allpoleC = {
+    pole: poleC,
+    column: 6,
+    rows: [5,4,3]
+}
+
+console.log(allpoleA, allpoleB, allpoleC)
+//BLOCK SELECTORS
+let block1click = document.querySelector(".block1");
+var block1Value = block1click.dataset.value 
+let block2click = document.querySelector(".block2");
+var block2Value = block2click.dataset.value
+let block3click = document.querySelector(".block3");
+var block3Value = block3click.dataset.value
+
+let rows = Object.keys(blocks).length
+console.log(rows)
+let poles = [poleA, poleB, poleC];
+console.log(poles)
 //EMPTY POLES
 let arrayA = [];
 //where is the block in the tree
@@ -17,17 +52,16 @@ let arrayB = [];
 //locations of blocks
 let arrayC = [];
 
-//POLE SELECTORS
-let poleA = document.querySelector(".poleA");
-let poleB = document.querySelector(".poleB");
-let poleC = document.querySelector(".poleC");
-
-//BLOCK SELECTORS
-let block1click = document.querySelector(".block1");
-let block2click = document.querySelector(".block2");
-let block3click = document.querySelector(".block3");
-
+function findCel (poles,rows,column){
+    console.log(poleB.ondrop.draggable)
+pole.addEventListener("mouseover", function(e){
+    e.preventDefault()
+    e.target = document.querySelector(".box")
+})
+}
+console.log(document.querySelector(".box"))
 console.log(blocks.block1, blocks.block2, blocks.block3);
+console.log(block1Value, block2Value, block3Value)
 
 arrayA = [blocks.block1, blocks.block2, blocks.block3];
 
@@ -41,38 +75,23 @@ function allowDrop(e) {
 function drag(e) {
   e.dataTransfer.setData("text", e.target.id);
 }
+
 //maybe add class at onset
-function drop(e, block) {
+function drop(e) {
   e.preventDefault();
   var data = e.dataTransfer.getData("text");
   e.target.appendChild(document.getElementById(data));
+  console.log(e, data, e.target)
 }
+
 // var arrayA.lenghth = (arrayB.length) = (arrayC.length) = Object.keys(blocks).length
 
-function gridLocation(arr){
-    if (arr.slice(-1)[0] !== undefined){
-        console.log(arr)
-    } else {
-        []
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-// block1click.addEventListener("click", () => {
-//   allowDrop(e);
-//   drag(e);
-//   drop(e);
-//   console.log("block 1 dropped")
-// });
+// function gridLocation(arr){
+//     if (arr.slice(-1)[0] !== undefined){
+//         console.log(arr)
+//     } else {
+//         console.log("empty")
+//     }}
 
 // block2click.addEventListener("click", (e) => {
 //   allowDrop(e);
@@ -85,80 +104,3 @@ function gridLocation(arr){
 //   drag(e);
 //   drop(e)
 // });
-
-
-
-function positionCheck() {}
-
-//POLE ONCLICK
-// let poleAclick = poleA.addEventListener("click", function (e){
-//     e.preventDefault()
-//     console.log("you clicked array a")
-// })
-// let poleBclick = poleB.addEventListener("click", function (e){
-//     console.log(arrayB)
-// })
-// let poleCclick = poleC.addEventListener("click", function (e){
-//     console.log(arrayC)
-// })
-
-// //BLOCK ONCLICK
-
-// let clickB1 = block1click.addEventListener("click", moveB1)
-// let clickB2 = block2click.addEventListener("click", moveB2)
-// let clickB3 = block3click.addEventListener("click", moveB3)
-
-// //FUNCTIONS
-// function moveB3(e){
-//     e.preventDefault()
-//     poleB.append(block3click)
-// }
-// function moveB2(e){
-//     e.preventDefault()
-//     poleB.prepend(block2click)
-// }
-// function moveB1(e){
-//     e.preventDefault()
-//     poleB.prepend(block1click)
-// }
-
-// function moveB3(e){
-//     e.preventDefault()
-//     poleC.append(block3click)
-// }
-// function moveB2(e){
-//     e.preventDefault()
-//     poleC.prepend(block2click)
-// }
-// function moveB1(e){
-//     e.preventDefault()
-//     poleC.prepend(block1click)}
-
-// function removeFromA(block){
-//     arrayA.splice(arrayA.length, 1)
-// }
-
-// function addToB(block) {
-//     if (arrayB.length == 0) {
-//          arrayB.append(block[x])
-//   } if (arrayB.length >= 1 && block[x] < block[y]){
-//         arrayB.splice(1,1)
-//   }
-// }
-
-// function removeFromB(block){
-//     arrayB.splice(arrayB.length, 1)
-// }
-
-// function removeFromC(block){
-//     arrayC.splice(arrayC.length, 1)
-// }
-
-// function setUpListeners() {
-//     var b1 = ['one', 'two', '...etc.'];
-
-//     window.addEventListener('load', function() {
-//       doSomethingWithSomeb1(b1);
-//       // b1 is now part of the callback's scope.
-//     });
-//   }

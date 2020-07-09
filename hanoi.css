@@ -63,7 +63,7 @@
   justify-self: center;
   align-self: center;
   display: flexbox;
-  bottom: 0;
+  
 }
 
 .block2 {
@@ -75,7 +75,7 @@
   z-index: 1;
   justify-self: center;
   align-self: center;
-  display: flexbox;
+  display: flex;
 }
 .block3 {
   grid-row: 3;
@@ -86,7 +86,7 @@
   z-index: 1;
   align-self: center;
   justify-self: center;
-  display: flexbox;
+  display: flex;
 }
 
 .solidBlock {
@@ -100,20 +100,55 @@
 
 .poleA .row1 {
     flex-direction: column;
-    grid-column: 2;
-    grid-row: 2;
+    grid-row: 5;
     justify-content: center;
 }
 .poleB .row1 {
     flex-direction: column;
-    grid-column: 4;
-    grid-row: 2;
+    grid-column: 2;
+    grid-row: 5;
     justify-content: center;
 }
 
 .poleC .row1 {
     flex-direction: column;
+    grid-column: 6;
+    grid-row: 5;
+    justify-content: center;
+}
+.poleA .row2 {
+    flex-direction: column;
+    grid-column: 2;
+    grid-row: 4;
+    justify-content: center;
+}
+.poleB .row2 {
+    flex-direction: column;
     grid-column: 4;
-    grid-row: 2;
+    grid-row: 4;
+    justify-content: center;
+}
+.poleC .row2 {
+    flex-direction: column;
+    grid-column: 6;
+    grid-row: 4;
+    justify-content: center;
+}
+.poleA .row3 {
+    flex-direction: column;
+    grid-column: 2;
+    grid-row: 3;
+    justify-content: center;
+}
+.poleB .row3 {
+    flex-direction: column;
+    grid-column: 4;
+    grid-row: 3;
+    justify-content: center;
+}
+.poleC .row3 {
+    flex-direction: column;
+    grid-column: 6;
+    grid-row: 3;
     justify-content: center;
 }
