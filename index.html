@@ -17,14 +17,14 @@
         <main>
              <!-- <div class="allBlocks"></div> -->
             <div class="box">
-            <div class="testblock"></div>               
-            <div class="block1 solidBlock"draggable="true">1</div>
+                 
+            <div class="block1 solidBlock" draggable="true" onstart="drag(event)" id="b1">1</div>
                 <div class="poleA" id="a">
                 </div>
-                <div class="block2 solidBlock">2</div>
-                <div class="poleB" id="b">
+                <div class="block2 solidBlock" id="b2">2</div>
+                <div class="poleB" ondrop="drop(event)" ondragover="allowDrop(event)" id="b">
             </div>
-            <div class="block3 solidBlock">3</div>
+            <div class="block3 solidBlock" id="b3">3</div>
                 <div class="poleC" id="c">
                 </div>
                 <!-- <div class="block4 solidBlock">4</div>  -->

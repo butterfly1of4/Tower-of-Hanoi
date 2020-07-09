@@ -8,8 +8,8 @@ const block3 = "3";
 let arrayA = [];
 //where is the block in the tree
 // only move last arr element if last
-//element.dataset.size etc
-//colummn dataset too
+//element.b1set.size etc
+//colummn b1set too
 let arrayB = [, , ,];
 //locations of blocks
 let arrayC = [, , ,];
@@ -23,7 +23,7 @@ let poleC = document.querySelector(".poleC");
 let block1click = document.querySelector(".block1");
 let block2click = document.querySelector(".block2");
 let block3click = document.querySelector(".block3");
-
+console.log(typeof(blo))
 console.log(block1, block2, block3);
 
 arrayA = [block1, block2, block3];
@@ -31,15 +31,18 @@ arrayA = [block1, block2, block3];
 let x = "";
 let y = "";
 
-function dragStart(e) {
-  e.dataTransfer.setData("block1", e.target.block1click);
+function allowDrop(e){
+    e.preventDefault()
+}
+function drag(e) {
+  e.dataTransfer.setb1("text", e.target.id);
 }
 
-function dragDrop(e){
+function drop(e){
     e.preventDefault()
-    var block = e.dataTransfer.getData(block1click)
-    e.target.appendChild(poleB(block))
-}
+    var data = e.dataTransfer.getData("text")
+    e.target.appendChild(document.getElementById("b1"))
+}   
 //POLE ONCLICK
 // let poleAclick = poleA.addEventListener("click", function (e){
 //     e.preventDefault()
@@ -105,10 +108,10 @@ function dragDrop(e){
 // }
 
 // function setUpListeners() {
-//     var data = ['one', 'two', '...etc.'];
+//     var b1 = ['one', 'two', '...etc.'];
 
 //     window.addEventListener('load', function() {
-//       doSomethingWithSomeData(data);
-//       // data is now part of the callback's scope.
+//       doSomethingWithSomeb1(b1);
+//       // b1 is now part of the callback's scope.
 //     });
 //   }
