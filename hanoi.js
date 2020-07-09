@@ -1,8 +1,11 @@
 console.log("hanoi");
 //BLOCK VALUES
-const block1 = "1";
-const block2 = "2";
-const block3 = "3";
+const blocks = {
+    block1: 1,
+    block2: 2,
+    block3: 3
+}
+
 
 //EMPTY POLES
 let arrayA = [];
@@ -10,9 +13,9 @@ let arrayA = [];
 // only move last arr element if last
 //element.b1set.size etc
 //colummn b1set too
-let arrayB = [, , ,];
+let arrayB = [];
 //locations of blocks
-let arrayC = [, , ,];
+let arrayC = [];
 
 //POLE SELECTORS
 let poleA = document.querySelector(".poleA");
@@ -24,9 +27,9 @@ let block1click = document.querySelector(".block1");
 let block2click = document.querySelector(".block2");
 let block3click = document.querySelector(".block3");
 
-console.log(block1, block2, block3);
+console.log(blocks.block1, blocks.block2, blocks.block3);
 
-arrayA = [block1, block2, block3];
+arrayA = [blocks.block1, blocks.block2, blocks.block3];
 
 let x = "";
 let y = "";
@@ -34,36 +37,56 @@ let y = "";
 function allowDrop(e) {
   e.preventDefault();
 }
+//maybe add remove class at onset
 function drag(e) {
-  console.log(e.target.id);
   e.dataTransfer.setData("text", e.target.id);
 }
-
+//maybe add class at onset
 function drop(e, block) {
   e.preventDefault();
   var data = e.dataTransfer.getData("text");
-  console.log(data);
   e.target.appendChild(document.getElementById(data));
-  console.log(block1click);
+}
+// var arrayA.lenghth = (arrayB.length) = (arrayC.length) = Object.keys(blocks).length
+
+function gridLocation(arr){
+    if (arr.slice(-1)[0] !== undefined){
+        console.log(arr)
+    } else {
+        []
+    }
 }
 
-block1click.addEventListener("click", (e) => {
-  console.log(block1click);
-  allowDrop(e);
-  drag(e);
-  drop(e, block1click);
-});
 
-block2click.addEventListener("click", () => {
-  allowDrop(e);
-  drag(e);
-  // ondrop = block2drop.drop(e)
-});
 
-block3click.addEventListener("click", () => {
-  allowDrop(e);
-  drag(e);
-});
+
+
+
+
+
+
+
+
+// block1click.addEventListener("click", () => {
+//   allowDrop(e);
+//   drag(e);
+//   drop(e);
+//   console.log("block 1 dropped")
+// });
+
+// block2click.addEventListener("click", (e) => {
+//   allowDrop(e);
+//   drag(e);
+//   drop(e)
+// })
+
+// block3click.addEventListener("click", (e) => {
+//   allowDrop(e);
+//   drag(e);
+//   drop(e)
+// });
+
+
 
 function positionCheck() {}
 

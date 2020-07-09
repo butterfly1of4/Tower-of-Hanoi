@@ -22,6 +22,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-content: flex-start;
+  justify-items: center;
 }
 
 .poleB {
@@ -31,6 +32,8 @@
   flex-direction: column;
   justify-content: flex-start;
   align-content: flex-start;
+  justify-items: center;
+
 }
 
 .poleC {
@@ -40,6 +43,8 @@
   flex-direction: column;
   justify-content: flex-start;
   align-content: flex-start;
+  justify-items: center;
+
 }
 
 .floor {
@@ -52,18 +57,20 @@
   grid-row: 5;
   grid-column: 2;
   height: 70px;
-  width: 110%;
+  width: 130%;
   background-color: navy;
   z-index: 1;
   justify-self: center;
   align-self: center;
-  /* display: flexbox; */
+  display: flexbox;
+  bottom: 0;
 }
+
 .block2 {
   grid-row: 4;
   grid-column: 2;
   height: 70px;
-  width: 100px;
+  width: 100%;
   background-color: navy;
   z-index: 1;
   justify-self: center;
@@ -74,7 +81,7 @@
   grid-row: 3;
   grid-column: 2;
   height: 70px;
-  width: 65px;
+  width: 60%;
   background-color: navy;
   z-index: 1;
   align-self: center;
@@ -89,4 +96,24 @@
 .testblock {
   grid-row: 1;
   grid-column: 2;
+}
+
+.poleA .row1 {
+    flex-direction: column;
+    grid-column: 2;
+    grid-row: 2;
+    justify-content: center;
+}
+.poleB .row1 {
+    flex-direction: column;
+    grid-column: 4;
+    grid-row: 2;
+    justify-content: center;
+}
+
+.poleC .row1 {
+    flex-direction: column;
+    grid-column: 4;
+    grid-row: 2;
+    justify-content: center;
 }
