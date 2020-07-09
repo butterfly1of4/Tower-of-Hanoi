@@ -31,49 +31,41 @@ arrayA = [block1, block2, block3];
 let x = "";
 let y = "";
 
-function allowDrop(e){
-    e.preventDefault()
+function allowDrop(e) {
+  e.preventDefault();
 }
 function drag(e) {
-  e.dataTransfer.setb1("text", e.target.class);
+  console.log(e.target.id);
+  e.dataTransfer.setData("text", e.target.id);
 }
 
-let block2drop = {
-    drop: function(e){
-        e.preventDefault()
-        var data = e.dataTransfer.getData("text")
-        e.target.appendChild(document.getElementById(block2click))  
-    }
+function drop(e, block) {
+  e.preventDefault();
+  var data = e.dataTransfer.getData("text");
+  console.log(data);
+  e.target.appendChild(document.getElementById(data));
+  console.log(block1click);
 }
-// for (var 
-//     items=document.querySelectorAll('[draggable = "item"]'),
-//     len = items.length,
-//     i  =0; i < len; i++){
-//         i
-//     }
-// )
 
-// function drop(e){
-//     e.preventDefault()
-//     var data = e.dataTransfer.getData("text")
-//     e.target.appendChild(document.getElementById(data))
-// }   
+block1click.addEventListener("click", (e) => {
+  console.log(block1click);
+  allowDrop(e);
+  drag(e);
+  drop(e, block1click);
+});
 
-block1click.addEventListener("click", () => {
-    allowDrop(e);
-    drag(e);  
-})
 block2click.addEventListener("click", () => {
-    allowDrop(e);
-    drag(e);  
-    ondrop = block2drop.drop(e)
-})
+  allowDrop(e);
+  drag(e);
+  // ondrop = block2drop.drop(e)
+});
 
 block3click.addEventListener("click", () => {
-    allowDrop(e);
-    drag(e);  
+  allowDrop(e);
+  drag(e);
+});
 
-})
+function positionCheck() {}
 
 //POLE ONCLICK
 // let poleAclick = poleA.addEventListener("click", function (e){
