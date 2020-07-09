@@ -23,7 +23,7 @@ let poleC = document.querySelector(".poleC");
 let block1click = document.querySelector(".block1");
 let block2click = document.querySelector(".block2");
 let block3click = document.querySelector(".block3");
-console.log(typeof(blo))
+
 console.log(block1, block2, block3);
 
 arrayA = [block1, block2, block3];
@@ -35,14 +35,46 @@ function allowDrop(e){
     e.preventDefault()
 }
 function drag(e) {
-  e.dataTransfer.setb1("text", e.target.id);
+  e.dataTransfer.setb1("text", e.target.class);
 }
 
-function drop(e){
-    e.preventDefault()
-    var data = e.dataTransfer.getData("text")
-    e.target.appendChild(document.getElementById("b1"))
-}   
+let block2drop = {
+    drop: function(e){
+        e.preventDefault()
+        var data = e.dataTransfer.getData("text")
+        e.target.appendChild(document.getElementById(block2click))  
+    }
+}
+// for (var 
+//     items=document.querySelectorAll('[draggable = "item"]'),
+//     len = items.length,
+//     i  =0; i < len; i++){
+//         i
+//     }
+// )
+
+// function drop(e){
+//     e.preventDefault()
+//     var data = e.dataTransfer.getData("text")
+//     e.target.appendChild(document.getElementById(data))
+// }   
+
+block1click.addEventListener("click", () => {
+    allowDrop(e);
+    drag(e);  
+})
+block2click.addEventListener("click", () => {
+    allowDrop(e);
+    drag(e);  
+    ondrop = block2drop.drop(e)
+})
+
+block3click.addEventListener("click", () => {
+    allowDrop(e);
+    drag(e);  
+
+})
+
 //POLE ONCLICK
 // let poleAclick = poleA.addEventListener("click", function (e){
 //     e.preventDefault()
