@@ -30,9 +30,11 @@
   display: flex;
   background-color: red;
   flex-direction: column;
-  /* justify-content: flex-start;
-  align-content: flex-start;
-  justify-items: center; */
+  justify-content: center;
+  align-content: flex-end;
+  justify-items: center;
+  align-items: flex-end;
+  vertical-align: bottom;
 }
 
 .poleC {
@@ -61,9 +63,11 @@
   height: 70px;
   width: 130%;
   background-color: navy;
-  z-index: 4;
+  z-index: 2;
   justify-self: center;
   align-self: flex-end;
+  margin-bottom: 0;
+
     /* bottom: -100%; */
   /* flex-direction: column-reverse; */
 }
@@ -75,9 +79,10 @@
   height: 70px;
   width: 100%;
   background-color: navy;
-  z-index: 4;
+  z-index: 2;
   justify-self: center;
   align-self: flex-end;
+
   /* display: flex; */
 }
 
@@ -89,7 +94,7 @@
   height: 70px;
   width: 60%;
   background-color: navy;
-  z-index: 4;
+  z-index: 2;
   align-self: flex-end;
   justify-self: center;
   /* display: flex; */

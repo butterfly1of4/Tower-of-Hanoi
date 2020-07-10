@@ -60,7 +60,7 @@ function drop(e) {
   e.target.appendChild(document.getElementById(data));
   console.log(e, data, e.target)
 }
-
+let droppedBlock(){}
 
 
 // block2click.addEventListener("click", (e) => {
