@@ -16,18 +16,19 @@ let poleC = document.querySelector(".poleC");
 //BLOCK SELECTORS
 var draggable = document.querySelectorAll("[draggable]");
 let block1click = document.querySelector(".block1");
-var block1Value = block1click.dataset.value;
 let b1 = document.querySelector("#b1");
-let block2click = document.querySelector(".block2");
-var block2Value = block2click.dataset.value;
-let b2 = document.querySelector("#b2");
-let block3click = document.querySelector(".block3");
-var block3Value = block3click.dataset.value;
-let b3 = document.querySelector("#b3");
-let block4click = document.querySelector(".block4");
-var block4Value = block4click.dataset.value;
-let b4 = document.querySelector("#b4");
+let valueB1 = b1.dataset.value
 
+let block2click = document.querySelector(".block2");
+let b2 = document.querySelector("#b2");
+let valueB2 = b2.dataset.value
+
+let block3click = document.querySelector(".block3");
+let b3 = document.querySelector("#b3");
+let valueB3 = b3.dataset.value
+let block4click = document.querySelector(".block4");
+let b4 = document.querySelector("#b4");
+let valueB4 = b4.dataset.value
 //EMPTY POLES
 
 let arrayA = [];
@@ -113,6 +114,13 @@ function takeLast(arr) {
 };
 takeLast(arrayA)
 
+//ADD ELEMENT TO NEW ARRAY
+function pushOnNew(arr) {
+    y = arr.splice(0, 1, x);
+  //   console.log(arr, y);
+    return arr.length;
+  }
+  pushOnNew(arrayB);
 // x = x[0].dataset.value
 
 
@@ -138,13 +146,6 @@ compareBlocks(x,y);
 
 
 
-//ADD ELEMENT TO NEW ARRAY
-function pushOnNew(arr) {
-  y = arr.splice(0, 1, x);
-//   console.log(arr, y);
-  return arr.length;
-}
-pushOnNew(arrayB);
 // y = y[0].dataset.value
 
 console.log(x, y);
@@ -172,80 +173,3 @@ function winCheck() {
     console.log("keep playing");
   }
 }
-
-function moveBlock(){
-    function drag(e){
-    console.log("so far")}
-    function takeLast(arr){
-    console.log("so far", arr)}
-    for (let i = 0; i < draggable.length; i++) {
-        draggable[i].addEventListener("dragstart", drag);
-      }
-      console.log("so far")
-
-//EVENT LISTENERS- DRAGSTART
-poleA.addEventListener("dragstart", drag);
-poleB.addEventListener("dragstart", drag);
-poleC.addEventListener("dragstart", drag);
-
-//EVENT LISTENERS- DRAGOVER
-poleA.addEventListener("dragover", dragover);
-poleB.addEventListener("dragover", dragover);
-poleC.addEventListener("dragover", dragover);
-
-//EVENT LISTENERS- DROP
-poleA.addEventListener("drop", drop);
-poleB.addEventListener("drop", drop);
-poleC.addEventListener("drop", drop);
-
-//EVENT LISTENERS- BLOCK1
-block1click.addEventListener("dragstart", drag);
-block1click.addEventListener("dragover", dragover);
-block1click.addEventListener("drop", drop);
-block1click.classList.add("landBlock")
-
-//EVENT LISTENERS- BLOCK2
-block2click.addEventListener("dragstart", drag);
-block2click.addEventListener("dragover", dragover);
-block2click.addEventListener("drop", drop);
-block2click.classList.add("landBlock")
-
-//EVENT LISTENERS - BLOCK3
-block3click.addEventListener("dragstart", drag);
-block3click.addEventListener("dragover", dragover);
-block3click.addEventListener("drop", drop);
-block3click.classList.add("landBlock")
-
-
-//EVENT LISTENERS- BLOCK4
-block4click.addEventListener("dragstart", drag);
-block4click.addEventListener("dragover", dragover);
-block4click.addEventListener("drop", drop);
-block4click.classList.add("landBlock")
-
-function compareBlocks(x,y) {
-        console.log("so far")
-        return( x)
-       
-    }
-    function dragover(e) {
-        e.preventDefault();
-      document.querySelector("[draggable") == true;
-    }
-    function drop(e) {
-        e.preventDefault();
-        var data = e.dataTransfer.getData("text");
-        e.target.appendChild(document.getElementById(data));
-        console.log("i'm dropped");
-      }
-      
-}
-function winCheck() {
-    if ((arrayC = [block1click, block2click, block3click, block4click])) {
-      console.log("game over");
-    } else {
-      moveBlock()
-      console.log("keep playing");
-    }
-  }
-moveBlock()
