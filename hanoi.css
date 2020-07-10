@@ -56,7 +56,7 @@
   position: relative;;
 }
 
-.block1 {
+.block4 {
   grid-row: 5; 
   margin-top: auto;
   grid-column: 2;
@@ -72,7 +72,7 @@
   /* flex-direction: column-reverse; */
 }
 
-.block2 {
+.block3 {
   grid-row: 4; 
   grid-column: 2;
   margin-top: auto;
@@ -87,12 +87,12 @@
 }
 
 
-.block3 {
+.block2 {
   grid-row: 3; 
   grid-column: 2;
   margin-top: auto;
   height: 70px;
-  width: 60%;
+  width: 80%;
   background-color: navy;
   z-index: 2;
   align-self: flex-end;
@@ -100,58 +100,15 @@
   /* display: flex; */
 } 
 
-/* 
-.poleA .row1 {
-    flex-direction: column;
-    grid-row: 5;
-    justify-content: center;
-}
-.poleB .row1 {
-    flex-direction: column;
+.block1 {
+    grid-row: 2; 
     grid-column: 2;
-    grid-row: 5;
-    justify-content: center;
-}
-
-.poleC .row1 {
-    flex-direction: column;
-    grid-column: 6;
-    grid-row: 5;
-    justify-content: center;
-}
-.poleA .row2 {
-    flex-direction: column;
-    grid-column: 2;
-    grid-row: 4;
-    justify-content: center;
-}
-.poleB .row2 {
-    flex-direction: column;
-    grid-column: 4;
-    grid-row: 4;
-    justify-content: center;
-}
-.poleC .row2 {
-    flex-direction: column;
-    grid-column: 6;
-    grid-row: 4;
-    justify-content: center;
-}
-.poleA .row3 {
-    flex-direction: column;
-    grid-column: 2;
-    grid-row: 3;
-    justify-content: center;
-}
-.poleB .row3 {
-    flex-direction: column;
-    grid-column: 4;
-    grid-row: 3;
-    justify-content: center;
-}
-.poleC .row3 {
-    flex-direction: column;
-    grid-column: 6;
-    grid-row: 3;
-    justify-content: center;
-} */
+    margin-top: auto;
+    height: 70px;
+    width: 60%;
+    background-color: navy;
+    z-index: 2;
+    align-self: flex-end;
+    justify-self: center;
+    /* display: flex; */
+  } 
