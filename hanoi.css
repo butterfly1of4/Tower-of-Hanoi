@@ -26,6 +26,7 @@ ul {
 .box {
   display: grid;
   grid-template-columns: 25% 2em 1fr 2em 1fr 2em 25%;
+  grid-template-rows: 70% 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   height: 50vh;
   margin-top: auto;
 }
@@ -76,12 +77,13 @@ ul {
   width: 100vw;
   grid-row: 6;
   background-color: black;
-  position: relative;;
+  position: relative;
 }
 
 .block4 {
   grid-row: 5; 
   margin-top: auto;
+  margin-bottom: 3em;
   grid-column: 2;
   height: 3em;
   width: 10em;
@@ -139,3 +141,9 @@ ul {
     padding-top: 1px;
   } 
 
+  .landBlock {
+    margin-top: auto;
+    align-self: flex-end;
+    display: block;
+
+  }

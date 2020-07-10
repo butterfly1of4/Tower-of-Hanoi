@@ -117,8 +117,6 @@ takeLast(arrayA)
 
 
 
-
-
 function preventLand(z) {
     z.document.classList.remove('draggable')
 }
@@ -127,9 +125,14 @@ function compareBlocks(x, y) {
   if (x < y) {
     function drop(e) {
         console.log("I've landed")
+    } }
+    else {
+        // y.classList.remove("draggable")
+        return 
     }
 }
-compareBlocks(block1Value, block4Value);
+
+compareBlocks(x,y);
 
 
 
@@ -179,6 +182,70 @@ function moveBlock(){
         draggable[i].addEventListener("dragstart", drag);
       }
       console.log("so far")
+
+//EVENT LISTENERS- DRAGSTART
+poleA.addEventListener("dragstart", drag);
+poleB.addEventListener("dragstart", drag);
+poleC.addEventListener("dragstart", drag);
+
+//EVENT LISTENERS- DRAGOVER
+poleA.addEventListener("dragover", dragover);
+poleB.addEventListener("dragover", dragover);
+poleC.addEventListener("dragover", dragover);
+
+//EVENT LISTENERS- DROP
+poleA.addEventListener("drop", drop);
+poleB.addEventListener("drop", drop);
+poleC.addEventListener("drop", drop);
+
+//EVENT LISTENERS- BLOCK1
+block1click.addEventListener("dragstart", drag);
+block1click.addEventListener("dragover", dragover);
+block1click.addEventListener("drop", drop);
+block1click.classList.add("landBlock")
+
+//EVENT LISTENERS- BLOCK2
+block2click.addEventListener("dragstart", drag);
+block2click.addEventListener("dragover", dragover);
+block2click.addEventListener("drop", drop);
+block2click.classList.add("landBlock")
+
+//EVENT LISTENERS - BLOCK3
+block3click.addEventListener("dragstart", drag);
+block3click.addEventListener("dragover", dragover);
+block3click.addEventListener("drop", drop);
+block3click.classList.add("landBlock")
+
+
+//EVENT LISTENERS- BLOCK4
+block4click.addEventListener("dragstart", drag);
+block4click.addEventListener("dragover", dragover);
+block4click.addEventListener("drop", drop);
+block4click.classList.add("landBlock")
+
+function compareBlocks(x,y) {
+        console.log("so far")
+        return( x)
+       
+    }
+    function dragover(e) {
+        e.preventDefault();
+      document.querySelector("[draggable") == true;
+    }
+    function drop(e) {
+        e.preventDefault();
+        var data = e.dataTransfer.getData("text");
+        e.target.appendChild(document.getElementById(data));
+        console.log("i'm dropped");
+      }
+      
 }
-}
-// moveBlock()
+function winCheck() {
+    if ((arrayC = [block1click, block2click, block3click, block4click])) {
+      console.log("game over");
+    } else {
+      moveBlock()
+      console.log("keep playing");
+    }
+  }
+moveBlock()
