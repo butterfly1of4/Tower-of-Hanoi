@@ -31,18 +31,12 @@ let b4 = document.querySelector("#b4");
 //EMPTY POLES
 
 let arrayA = [];
-//where is the block in the tree
-// only move last arr element if last
-//element.b1set.size etc
-//colummn b1set too
 let arrayB = [];
-//locations of blocks
 let arrayC = [];
 
-arrayA = [block1click, block2click, block3click, block4click];
+arrayA = [block4click, block3click, block2click, block1click];
 
-console.log(block1, block2, block3);
-console.log(block1Value, block2Value, block3Value, block4Value);
+console.log(arrayA[0], arrayA[3])
 
 //EXTRA VARIABLES
 let x = "";
@@ -61,9 +55,10 @@ for (let i = 0; i < draggable.length; i++) {
 }
 
 //ALLOW THE BLOCK TO LAND
+
 function dragover(e) {
-document.querySelector("[draggable") == true;
-  e.preventDefault();
+    e.preventDefault();
+  document.querySelector("[draggable") == true;
 }
 
 //LAND THE BLOCK
@@ -73,17 +68,17 @@ function drop(e) {
   e.target.appendChild(document.getElementById(data));
   console.log("i'm dropped");
 }
-//EVENT LISTENERS- POLEA
+//EVENT LISTENERS- DRAGSTART
 poleA.addEventListener("dragstart", drag);
 poleB.addEventListener("dragstart", drag);
 poleC.addEventListener("dragstart", drag);
 
-//EVENT LISTENERS- POLEB
+//EVENT LISTENERS- DRAGOVER
 poleA.addEventListener("dragover", dragover);
 poleB.addEventListener("dragover", dragover);
 poleC.addEventListener("dragover", dragover);
 
-//EVENT LISTENERS- POLEC
+//EVENT LISTENERS- DROP
 poleA.addEventListener("drop", drop);
 poleB.addEventListener("drop", drop);
 poleC.addEventListener("drop", drop);
@@ -109,22 +104,41 @@ block4click.addEventListener("dragover", dragover);
 block4click.addEventListener("drop", drop);
 
 //REMOVE THE LAST ELEMENT FROM AN ARRAY
-let last = function takeLast(arr) {
+function takeLast(arr) {
   let length = arr.length;
   console.log(arr, arr.length);
   x = arr.splice(length - 1, 1);
   console.log(x);
   return length, x;
 };
-last(arrayA);
-// takeLast(arrayA)
+takeLast(arrayA)
 
 // x = x[0].dataset.value
+
+
+
+
+
+function preventLand(z) {
+    z.document.classList.remove('draggable')
+}
+//COMPARE BLOCK SIZES
+function compareBlocks(x, y) {
+  if (x < y) {
+    function drop(e) {
+        console.log("I've landed")
+    }
+}
+compareBlocks(block1Value, block4Value);
+
+
+
+
 
 //ADD ELEMENT TO NEW ARRAY
 function pushOnNew(arr) {
   y = arr.splice(0, 1, x);
-  console.log(arr, y);
+//   console.log(arr, y);
   return arr.length;
 }
 pushOnNew(arrayB);
@@ -135,38 +149,36 @@ console.log(x, y);
 //EXAMINE ARRAYS
 function printArrays(arr) {
   for (let i = 0; i < arr.length; i++) {
-    console.log(arr, arr.length);
     return arr[i], arr[i].length;
   }
   if ((arr = [])) {
-    console.log([]);
     return [];
   }
 }
-printArrays(arrayA);
-printArrays(arrayB);
-printArrays(arrayC);
-
-//COMPARE BLOCK SIZES
-function compareBlocks(x, y) {
-  if (x > y) { 
-    draggable == false
-    console.log("can't land")
-  } else {
-      draggable == true
-      console.log("can land")
-  }
-}
-compareBlocks(block1Value, block4Value)
+// printArrays(arrayA);
+// printArrays(arrayB);
+// printArrays(arrayC);
 
 //WINCHECK
-function winCheck(){
-    if (arrayC = [block1click, block2click, block3click, block4click]) {
-        draggable ==  false
-        console.log("game over")
-    }
-    else {
-        draggable == true;
-        console.log("keep playing")
-    }
+function winCheck() {
+  if ((arrayC = [block1click, block2click, block3click, block4click])) {
+    draggable == false;
+    console.log("game over");
+  } else {
+    draggable == true;
+    console.log("keep playing");
+  }
 }
+
+function moveBlock(){
+    function drag(e){
+    console.log("so far")}
+    function takeLast(arr){
+    console.log("so far", arr)}
+    for (let i = 0; i < draggable.length; i++) {
+        draggable[i].addEventListener("dragstart", drag);
+      }
+      console.log("so far")
+}
+}
+// moveBlock()
