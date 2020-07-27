@@ -26,7 +26,7 @@ ul {
 .box {
   display: grid;
   grid-template-columns: 25% 2em 1fr 2em 1fr 2em 25%;
-  grid-template-rows: 70% 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto 3em 3em 3em 3em 3em 3em 3em 3em;
   height: 50vh;
   margin-top: auto;
 }
@@ -93,6 +93,7 @@ ul {
   margin-bottom: 0;
   text-align: center;
   color: white;
+  border: 1px solid white;
 }
 
 .block3 {
@@ -107,6 +108,7 @@ ul {
   align-self: flex-end;
   text-align: center;
   color: white;
+  border: 1px solid white;
 }
 
 
@@ -122,6 +124,8 @@ ul {
   justify-self: center;
   text-align: center;
     color: white;
+  border: 1px solid white;
+
 } 
 
 .block1 {
@@ -138,6 +142,7 @@ ul {
     color: white;
     padding-bottom: 1px;
     padding-top: 1px;
+   border: 1px solid white;
   } 
 
   .landBlock {
@@ -146,3 +151,22 @@ ul {
     display: block;
 
   }
+  .landColumnB {
+    
+    margin-top: auto;
+    z-index: 2;
+    align-self: flex-end;
+    justify-self: center;
+    text-align: center;
+    justify-items: center;
+    grid-column: 4;
+    display: flex;
+    /* background-color: red; */
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-end;
+    justify-items: center;
+    align-items: flex-end;
+    vertical-align: bottom;
+  }
+ 

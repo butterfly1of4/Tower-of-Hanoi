@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="hanoi.css">
+    <meta charset="utf-8" />
+    <title>Tower of Hanoi</title>
+    </head>
+    <body>
+        <header>The Tower of Hanoi</header>
+           
+            <div class="rules"><span>Rules:</span>
+                <ul>
+                <li>All Discs must be moved from the left-most pole to the right-most pole.</li>
+                <li>A larger block can never be on a smaller block.</li>
+                <li>Only one block can be moved at a time.</li>
+                <li>Each turn, a block must be moved to another pole.</li> <li>You can put blocks on any of the three poles.</li></ul></div>
+        <main>
+             <!-- <div class="allBlocks"></div> -->
+            <div class="box">
+                 
+            <div class="block1 landColumnB " data-value="1" draggable="true" id="b1">1</div>
+            <div class="block2 solidBlock" data-value="2" draggable="true" id="b2">2</div>
+            <div class="block3 solidBlock" data-value="3" draggable="true" id="b3">3</div>
+            <div class="block4 solidBlock" data-value="4" draggable="true" id="b4">4</div>
+
+                <div class="poleA pole" id="a">
+                </div>
+                <div class="poleB pole" id="b">
+            </div>
+                <div class="poleC pole"id="c">      </div>
+      
+            <div class="floor"></div>
+        </div>
+            </div>
+        </main>
+        <script src="hanoi2.js"></script>
+    </body>
+    <!-- pole row1 row2 row3 -->
+    <!-- ondrop="drop(event)" ondragover="allowDrop(event)"  -->
+</html>
+
+
