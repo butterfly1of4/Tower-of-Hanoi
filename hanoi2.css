@@ -1,104 +1,172 @@
 * {
-    box-sizing: border-box;
-    max-height: 100vh;
-  }
-  /* .testclass {
-      grid-row: 5;
-      grid-column: 4;
-      background-color: yellow;
-  } */
-  .box {
-    height: 700px;
-    width: 600px;
-  }
-  #a {
-      grid-column: 2;
-      grid-row: 1 / 6;
-      background-color: cornflowerblue;
-      /* display: inline-block; */
-    }
-  .poleA {
+  box-sizing: border-box;
+  max-height: 100vh;
+}
+
+header {
+    text-align: center;
+    font-size: 24px;
+    font-family: cursive;
+    margin-bottom: 20px;
+}
+
+.span {
+    font-size: 16px;
+    font-weight: bold;
+}
+.rules {
+    text-align: center;
+    line-height: 2;
+    margin-bottom: 10%;
+}
+ul {
+    list-style-type: none;
+}
+
+.box {
+  display: grid;
+  grid-template-columns: 25% 2em 1fr 2em 1fr 2em 25%;
+  grid-template-rows: auto 3em 3em 3em 3em 3em 3em 3em 3em;
+  height: 50vh;
+  margin-top: auto;
+}
+
+.poleA {
+  grid-column: 2;
+  height: 50vh;
+  grid-row: 1 / 6;  
+  display: grid;
+  background-color: cornflowerblue;
+  flex-direction: column;
+  justify-content: center;
+  align-content: flex-end;
+  justify-items: center;
+  align-items: flex-end;
+  vertical-align: bottom;
+
+}
+
+.poleB {
+  grid-column: 4;
+  grid-row: 1 / 6;
+  display: grid;
+  background-color: red;
+  flex-direction: column;
+  justify-content: center;
+  align-content: flex-end;
+  justify-items: center;
+  align-items: flex-end;
+  vertical-align: bottom;
+  text-align: center;
+}
+
+.poleC {
+  grid-column: 6;
+  grid-row: 1 / 6; 
+  display: grid;
+  background-color: lightgreen;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-start;
+  justify-items: center; 
+  vertical-align: bottom;
+}
+
+.floor {
+  height: 2em;
+  width: 100vw;
+  grid-row: 6;
+  background-color: black;
+  position: relative;
+}
+
+.block4 {
+  grid-row: 5; 
+  margin-top: auto;
+  margin-bottom: 3em;
+  grid-column: 2;
+  height: 3em;
+  width: 10em;
+  background-color: navy;
+  z-index: 2;
+  justify-self: center;
+  align-self: flex-end;
+  margin-bottom: 0;
+  text-align: center;
+  color: white;
+  border: 1px solid white;
+}
+
+.block3 {
+  grid-row: 4; 
+  grid-column: 2;
+  margin-top: auto;
+  height:   3em;
+  width: 8em;
+  background-color: navy;
+  z-index: 2;
+  justify-self: center;
+  align-self: flex-end;
+  text-align: center;
+  color: white;
+  border: 1px solid white;
+}
+
+
+.block2 {
+  grid-row: 3; 
+  grid-column: 2;
+  margin-top: auto;
+  height: 3em;
+  width: 6em;
+  background-color: navy;
+  z-index: 2;
+  align-self: flex-end;
+  justify-self: center;
+  text-align: center;
+    color: white;
+  border: 1px solid white;
+
+} 
+
+.block1 {
+    grid-row: 2; 
     grid-column: 2;
-    grid-row: 1 / 6;
-    background-color: cornflowerblue;
-    /* display: inline-block; */
-  }
-  
-  #b {
-      grid-column: 4;
-      grid-row: 1/ 6;
-      background-color: red;
-      /* display: inline-block; */
-    }
-  .poleB {
-    grid-column: 4;
-    grid-row: 1/ 6;
-    background-color: red;
-    /* display: inline-block; */
-  }
-  #c {
-      grid-column: 6;
-      grid-row: 1 / 6;
-      background-color: lightgreen;
-      /* display: inline-block; */
-    }
-  .poleC {
-    grid-column: 6;
-    grid-row: 1 / 6;
-    background-color: lightgreen;
-    /* display: inline-block; */
-  }
-  .floor {
-    grid-column: 1 / 8;
-    grid-row: 6;
-    background-color: black;
-  }
-  
-  .block1 {
-    grid-row: 5;
-    grid-column: 2;
-    height: 70px;
-    width: 100%;
+    margin-top: auto;
+    height: 3em;
+    width: 4em;
     background-color: navy;
-    z-index: 1;
-    /* display: flexbox; */
+    z-index: 2;
+    align-self: flex-end;
+    justify-self: center;
+    text-align: center;
+    color: white;
+    padding-bottom: 1px;
+    padding-top: 1px;
+   border: 1px solid white;
+  } 
+
+  .landBlock {
+    margin-top: auto;
+    align-self: flex-end;
+    display: block;
+
   }
-  .block2 {
-      grid-row: 4;
-      grid-column: 2;
-      height: 70px;
-      width: 100px;
-      background-color: navy;
-      z-index: 1;
-      justify-self: center;
-      align-self: center;
-      display: flexbox;
+  .landColumnB {
+    margin-top: auto;
+    z-index: 2;
+    align-self: flex-end;
+    justify-self: center;
+    text-align: center;
+    justify-items: center;
+    grid-column: 4;
+    display: flex;
+    /* background-color: red; */
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-end;
+    justify-items: center;
+    align-items: flex-end;
+    vertical-align: bottom;
   }
-  .block3{
-      grid-row: 3;
-      grid-column: 2;
-      height: 70px;
-      width: 65px;
-      background-color: navy;
-      z-index: 1;
-      align-self: center;
-      justify-self: center;
-      display: flexbox;
-  }
-  
-  .solidBlock {
-      justify-items: center;
-  }
-  
-  .testblock {
-      grid-row: 1;
-      grid-column: 2;
-  }
-  
-  
-  /*
-  .block4{
-      height: 70px;
-      width: 40px;
-      background-color: navy;
-  }
+ 

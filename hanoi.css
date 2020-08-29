@@ -87,7 +87,7 @@ ul {
   height: 3em;
   width: 10em;
   background-color: navy;
-  z-index: 2;
+  z-index: 1;
   justify-self: center;
   align-self: flex-end;
   margin-bottom: 0;
@@ -103,7 +103,7 @@ ul {
   height:   3em;
   width: 8em;
   background-color: navy;
-  z-index: 2;
+  z-index: 1;
   justify-self: center;
   align-self: flex-end;
   text-align: center;
@@ -119,7 +119,7 @@ ul {
   height: 3em;
   width: 6em;
   background-color: navy;
-  z-index: 2;
+  z-index: 1;
   align-self: flex-end;
   justify-self: center;
   text-align: center;
@@ -135,7 +135,7 @@ ul {
     height: 3em;
     width: 4em;
     background-color: navy;
-    z-index: 2;
+    z-index: 1;
     align-self: flex-end;
     justify-self: center;
     text-align: center;
